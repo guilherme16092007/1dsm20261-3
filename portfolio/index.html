@@ -18,30 +18,46 @@
         .bodycolor {
             background-color: #b2aeae;
         }
+
+        .nav_direita {
+            float: right !important;
+        }
+
+        .p {
+            font-weight: bold;
+        }
+
+        .p2 {
+            color: black;
+        }
     </style>
 </head>
-</head>
 
-<body class="bg-dark-subtle">
+<body class="">
 
-    <nav class="bg-white">
-        <div class="d-flex justify-content-start">
-            <img src="/img/drop-down-button-32.png" alt="imagem">
-        </div>
-        <div class="dropdown d-flex justify-content-end">
-            <button class="btn btn-secondary dropdown-toggle bg-black border-black" type="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Expand
-            </button>
-            <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item active navtext" href="#">Inicio</a></li>
-                <li><a class="dropdown-item navtext" href="#">Projetos</a></li>
-                <li><a class="dropdown-item navtext" href="#">Sobre</a></li>
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Separated link</a></li>
-            </ul>
+    <div class="">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark-subtle p">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div>
+                        <img src="/portfolio/img/brl correto.png" alt="logo">
+                    </div>
+
+                    <div class="navbar-nav nav_direita p2">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" aria-disabled="true">Disabled</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+
     </nav>
 
 </body>

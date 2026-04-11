@@ -1,65 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Portfólio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-        .navtext {
-            padding: 7px;
-            color: #ff5100;
-            font-weight: bold;
-        }
+  <style>
+    html { scroll-behavior: smooth; }
 
-        .bodycolor {
-            background-color: #b2aeae;
-        }
+    body {
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+    }
 
-        .nav_direita {
-            float: right !important;
-        }
+    /* navbar */
+    .navbar {
+      border-bottom: 1px solid #38bdf8;
+    }
 
-        .p {
-            font-weight: bold;
-        }
+    .nav-link {
+      color: #38bdf8 !important;
+      position: relative;
+    }
 
-        .p2 {
-            color: black;
-        }
-    </style>
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #38bdf8;
+      left: 0;
+      bottom: 0;
+      transition: 0.3s;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* logo */
+    .logo {
+      width: 150px;
+      filter: invert(1) drop-shadow(0 0 6px #38bdf8);
+      transition: 0.3s;
+    }
+
+    .logo:hover {
+      filter: invert(1) drop-shadow(0 0 15px #38bdf8);
+    }
+
+    /* foto minha */
+    .eu{
+     padding: 15px;
+     width: 350px; 
+     height: 350px; 
+     object-fit: cover;
+     filter: drop-shadow(0 0 15px #38bdf8);
+    }
+
+    .eu:hover{ 
+        transition: 0,8s;
+        filter: drop-shadow(0 0 30px #38bdf8);
+    }
+
+    /* parte de cima */
+    .topo {
+      padding: 120px 20px;
+      text-align: center;
+    }
+
+    .topo h1 {
+      color: #38bdf8;
+    }
+
+    .frase {
+      opacity: 0.6;
+      font-size: 14px;
+    }
+
+    /* secoes */
+    .secao {
+      padding: 80px 20px;
+      border-bottom: 1px solid #111;
+    }
+
+    h2 {
+      color: #38bdf8;
+      margin-bottom: 20px;
+    }
+
+    /* cards */
+    .card-projeto {
+      background-color: #0a0a0a;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #38bdf8;
+      transition: 0.3s;
+    }
+
+    .card-projeto:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #38bdf8;
+    }
+
+    /* rodape */
+    footer {
+      border-top: 1px solid #38bdf8;
+      color: #38bdf8;
+    }
+
+  </style>
 </head>
+<body>
 
-<body class="">
+<!-- navbar -->
+<nav class="navbar navbar-dark bg-black">
+  <div class="container d-flex justify-content-between">
+    <img src="img/brl_correto-removebg-preview (1).png" class="logo">
 
-    <div class="">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark-subtle p">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div>
-                        <img src="/portfolio/img/brl correto.png" alt="logo">
-                    </div>
-
-                    <div class="navbar-nav nav_direita p2">
-                        <a class="nav-link" aria-current="page" href="#">Home</a>
-                        <a class="nav-link" href="#">Features</a>
-                        <a class="nav-link" href="#">Pricing</a>
-                        <a class="nav-link" aria-disabled="true">Disabled</a>
-                    </div>
-                </div>
-            </div>
+    <div>
+      <a class="nav-link d-inline p-1" href="#sobre">Sobre</a>
+      <a class="nav-link d-inline p-1" href="#projetos">Projetos</a>
+      <a class="nav-link d-inline p-1" href="#cursos">Cursos</a>
+      <a class="nav-link d-inline p-1" href="#formacao">Formação</a>
+      <a class="nav-link d-inline p-1" href="#contato">Contato</a>
     </div>
+  </div>
+</nav>
 
-    </nav>
+
+
+<!-- sobre -->
+<div id="sobre" class="secao">
+    <img class="rounded-circle img-fluid eu" src="img/eu para site (1).jpg" alt="EU">
+  <h2>Sobre mim</h2>
+  <p>
+    Estou no primeiro semestre e ainda aprendendo bastante coisa.
+    Estou tentando evoluir na programação aos poucos.
+  </p>
+</div>
+
+<!-- projetos -->
+<div id="projetos" class="secao">
+  <h2>Projetos</h2>
+
+  <div class="card-projeto">
+    <h5>API dos deputados</h5>
+    <p>Projeto da faculdade usando dados públicos.</p>
+  </div>
+
+  <div class="card-projeto">
+    <h5>Gráficos em Python</h5>
+    <p>Alguns gráficos usando Python.</p>
+  </div>
+
+  <div class="card-projeto">
+    <h5>Em desenvolvimento</h5>
+    <p>ainda fazendo mais coisas...</p>
+  </div>
+</div>
+
+<!-- cursos -->
+<div id="cursos" class="secao">
+  <h2>Cursos</h2>
+  <p>Curso de programação (em andamento)</p>
+  <p>Python básico</p>
+</div>
+
+<!-- formacao -->
+<div id="formacao" class="secao">
+  <h2>Formação</h2>
+  <p>Ensino médio completo</p>
+  <p>Faculdade (1º semestre)</p>
+</div>
+
+<!-- contato -->
+<div id="contato" class="secao">
+  <h2>Contato</h2>
+  <p>Email: guilhermeribeiro.hcr@gmail.com</p>
+  <p>GitHub: github.com/guilherme16092007</p>
+</div>
+
+<!-- rodape -->
+<footer class="text-center p-3">
+  <p>Desenvolvido por Guilherme Henrique Campos Ribero</p>
+</footer>
 
 </body>
-
 </html>

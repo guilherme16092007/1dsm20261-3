@@ -17,31 +17,57 @@
       color: #fff;
     }
 
-    /* Navbar Customizada */
+    /* Navbar */
     .navbar {
-      border-bottom: 1px solid #38bdf8;
-    }
+  border-bottom: 1px solid #38bdf8;
+}
 
-    .nav-link {
-      color: #38bdf8 !important;
-      position: relative;
-      margin-right: 15px;
-    }
+.nav-link {
+  color: #38bdf8 !important;
+  position: relative;
+  margin-right: 15px;
+}
 
-    .nav-link::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 2px;
-      background: #38bdf8;
-      left: 0;
-      bottom: 0;
-      transition: 0.3s;
-    }
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #38bdf8;
+  left: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
 
-    .nav-link:hover::after {
-      width: 100%;
-    }
+.nav-link:hover::after {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  label[for="menu-toggle"] {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  #menu-toggle:checked ~ #navbarNav {
+    display: block !important;
+  }
+
+  .collapse.navbar-collapse {
+    display: none;
+  }
+
+  .navbar-nav {
+    padding: 20px 0;
+  }
+
+  .nav-link {
+    margin: 10px 0;
+    display: inline-block;
+  }
+}
+
 
     /* Logo com Brilho */
     .logo {
@@ -52,6 +78,7 @@
 
     .logo:hover {
       filter: invert(1) drop-shadow(0 0 15px #38bdf8);
+      width: 150px;
     }
 
     /* Foto de Perfil */
@@ -66,6 +93,8 @@
 
     .eu:hover {
       filter: drop-shadow(0 0 30px #38bdf8);
+      width: 310px;
+      height: 310px;
     }
 
     /* Estilo dos Cards */
@@ -106,10 +135,12 @@
         <img src="img/brl_correto-removebg-preview (1).png" class="logo" alt="Logo">
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <input type="checkbox" id="menu-toggle" class="d-none">
+
+    <label for="menu-toggle" class="navbar-toggler">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto text-center">
@@ -124,7 +155,9 @@
   </nav>
 
   <div id="sobre" class="container py-5 text-center">
-    <img class="rounded-circle img-fluid eu mb-4" src="img/eu para site (1).jpg" alt="Minha Foto">
+    <a href="https://github.com/guilherme16092007" target="_blank">
+      <img class="rounded-circle img-fluid eu mb-4" src="img/eu para site (1).jpg" alt="Minha Foto">
+    </a>
     <h2>Sobre mim</h2>
     <div class="row justify-content-center">
       <div class="col-md-8">
@@ -214,8 +247,6 @@
   <footer class="text-center p-4 mt-5">
     <p class="m-0">Desenvolvido por Guilherme Henrique Campos Ribeiro</p>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Portfólio</title>
+  <title>Portfólio Guilherme Henrique Campos Ribeiro</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       background-color: #000;
       color: #fff;
-      margin: 0;
     }
 
-    /* navbar */
+    /* Navbar Customizada */
     .navbar {
       border-bottom: 1px solid #38bdf8;
     }
@@ -23,6 +25,7 @@
     .nav-link {
       color: #38bdf8 !important;
       position: relative;
+      margin-right: 15px;
     }
 
     .nav-link::after {
@@ -40,9 +43,9 @@
       width: 100%;
     }
 
-    /* logo */
+    /* Logo com Brilho */
     .logo {
-      width: 150px;
+      width: 120px;
       filter: invert(1) drop-shadow(0 0 6px #38bdf8);
       transition: 0.3s;
     }
@@ -51,143 +54,169 @@
       filter: invert(1) drop-shadow(0 0 15px #38bdf8);
     }
 
-    /* foto minha */
-    .eu{
-     padding: 15px;
-     width: 350px; 
-     height: 350px; 
-     object-fit: cover;
-     filter: drop-shadow(0 0 15px #38bdf8);
+    /* Foto de Perfil */
+    .eu {
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      filter: drop-shadow(0 0 15px #38bdf8);
+      transition: 0.8s;
+      border: 2px solid #38bdf8;
     }
 
-    .eu:hover{ 
-        transition: 0,8s;
-        filter: drop-shadow(0 0 30px #38bdf8);
+    .eu:hover {
+      filter: drop-shadow(0 0 30px #38bdf8);
     }
 
-    /* parte de cima */
-    .topo {
-      padding: 120px 20px;
-      text-align: center;
-    }
-
-    .topo h1 {
-      color: #38bdf8;
-    }
-
-    .frase {
-      opacity: 0.6;
-      font-size: 14px;
-    }
-
-    /* secoes */
-    .secao {
-      padding: 80px 20px;
-      border-bottom: 1px solid #111;
-    }
-
-    h2 {
-      color: #38bdf8;
-      margin-bottom: 20px;
-    }
-
-    /* cards */
+    /* Estilo dos Cards */
     .card-projeto {
       background-color: #0a0a0a;
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 20px;
       border: 1px solid #38bdf8;
       transition: 0.3s;
+      height: 100%;
     }
 
     .card-projeto:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
       box-shadow: 0 0 15px #38bdf8;
     }
 
-    /* rodape */
+    a.text-decoration-none, 
+      a {
+    text-decoration: none !important;
+      }
+
+    h2,
+    h5 {
+      color: #38bdf8;
+    }
+
     footer {
       border-top: 1px solid #38bdf8;
       color: #38bdf8;
     }
-
   </style>
 </head>
+
 <body>
 
-<!-- navbar -->
-<nav class="navbar navbar-dark bg-black">
-  <div class="container d-flex justify-content-between">
-    <img src="img/brl_correto-removebg-preview (1).png" class="logo">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="img/brl_correto-removebg-preview (1).png" class="logo" alt="Logo">
+      </a>
 
-    <div>
-      <a class="nav-link d-inline p-1" href="#sobre">Sobre</a>
-      <a class="nav-link d-inline p-1" href="#projetos">Projetos</a>
-      <a class="nav-link d-inline p-1" href="#cursos">Cursos</a>
-      <a class="nav-link d-inline p-1" href="#formacao">Formação</a>
-      <a class="nav-link d-inline p-1" href="#contato">Contato</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto text-center">
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#formacao">Formação</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="sobre" class="container py-5 text-center">
+    <img class="rounded-circle img-fluid eu mb-4" src="img/eu para site (1).jpg" alt="Minha Foto">
+    <h2>Sobre mim</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <p class="lead text-start">
+          Sou um desenvolvedor em formação, com interesse em transformar ideias em soluções práticas e funcionais. Tenho experiência com desenvolvimento web, utilizando tecnologias como HTML, CSS e frameworks como Bootstrap para criação de interfaces responsivas e bem estruturadas.
+        </p>
+        <p class="lead text-start">
+          Tenho grande interesse pela área de eletrônica e formação técnica pelo CTIG/UNESP, o que influencia diretamente minha forma de pensar e desenvolver soluções. Busco sempre entender não apenas o software, mas também sua relação com o hardware, trazendo uma visão mais completa e lógica para a resolução de problemas.
+        </p>
+        <p class="lead text-start ">
+          No desenvolvimento, tenho maior afinidade com o back-end, onde posso trabalhar com lógica, estrutura de dados e construção de sistemas mais robustos. Gosto de atuar na parte “por trás” das aplicações, garantindo que tudo funcione de forma eficiente, organizada e escalável.
+        </p>
+        <p class="lead text-start">
+          Também tenho experiência com projetos em equipe, utilizando ferramentas como GitHub e aplicando conceitos de metodologias ágeis para manter a organização e a produtividade. Estou sempre em busca de evolução, aprendendo novas tecnologias e enfrentando desafios que contribuam para o meu crescimento profissional.
+        </p>
+      </div>
     </div>
   </div>
-</nav>
 
+  <div id="projetos" class="container py-5">
+    <h2 class="text-center mb-5">Projetos</h2>
+    <div class="row g-4">
+      <a href="https://github.com/APILumina/API1_DSM_Lumina" target="_blank">
+      <div class="col-md-4">
+        <div class="card card-projeto p-3">
+          <div class="card-body">
+            <h5>API dos deputados</h5>
+            <p class="text-secondary">Projeto da faculdade visando deixar mais acessivel os dados dos deputados.</p>
+          </div>
+        </div>
+      </a>
+      </div>
 
+      <div class="col-md-4">
+        <a href="https://1dsm20261-3.vercel.app/" target="_blank">
+        <div class="card card-projeto p-3">
+          <div class="card-body">
+            <h5>Site Universidade Fictícia</h5>
+            <p class="text-secondary">Um site para uma universidade fictícia, desenvolvido com HTML e CSS durante as aulas.</p>
+          </div>
+        </div>
+      </a>
+      </div>
 
-<!-- sobre -->
-<div id="sobre" class="secao">
-    <img class="rounded-circle img-fluid eu" src="img/eu para site (1).jpg" alt="EU">
-  <h2>Sobre mim</h2>
-  <p>
-    Estou no primeiro semestre e ainda aprendendo bastante coisa.
-    Estou tentando evoluir na programação aos poucos.
-  </p>
-</div>
-
-<!-- projetos -->
-<div id="projetos" class="secao">
-  <h2>Projetos</h2>
-
-  <div class="card-projeto">
-    <h5>API dos deputados</h5>
-    <p>Projeto da faculdade usando dados públicos.</p>
+      <div class="col-md-4">
+        <a href="https://www.instagram.com/flex_source/" target="_blank">
+        <div class="card card-projeto p-3">
+          <div class="card-body">
+            <h5>Projeto de eletrônica</h5>
+            <p class="text-secondary">Projeto de eletrônica industrial feito no período do ensino técnico.</p>
+          </div>
+        </div>
+      </a>
+      </div>
+    </div>
   </div>
 
-  <div class="card-projeto">
-    <h5>Gráficos em Python</h5>
-    <p>Alguns gráficos usando Python.</p>
+  <div class="container py-5">
+    <div class="row">
+      <div id="cursos" class="col-md-6 mb-4">
+        <h2>Cursos</h2>
+        <ul class="list-unstyled">
+          <li>Desenvolvimento Web (HTML5, CSS3, Bootstrap) em andamento</li>
+          <li>Lógica de Programação com Python em andamento</li>
+          <li>Estrutura de Banco de Dados (SBD) em andamento</li>
+          <li>Análise de Dados Básica (Pandas) em andamento</li>
+        </ul>
+      </div>
+
+      <div id="formacao" class="col-md-6 mb-4">
+        <h2>Formação</h2>
+        <p>Ensino médio integrado ao técnico em eletrônica industrial - CTIG|UNESP</p>
+        <p>Faculdade de Desenvolvimento de Software Multiplataforma (1° semestre) FATEC</p>
+      </div>
+    </div>
   </div>
 
-  <div class="card-projeto">
-    <h5>Em desenvolvimento</h5>
-    <p>ainda fazendo mais coisas...</p>
+  <div id="contato" class="container py-5 text-center">
+    <div class="border border-secondary p-4 rounded-4">
+      <h2>Contato</h2>
+      <p>Email: <strong>guilhermeribeiro.hcr@gmail.com</strong></p>
+      <p>GitHub: <a href="https://github.com/guilherme16092007" class="text-info"
+          target="_blank">github.com/guilherme16092007</a></p>
+    </div>
   </div>
-</div>
 
-<!-- cursos -->
-<div id="cursos" class="secao">
-  <h2>Cursos</h2>
-  <p>Curso de programação (em andamento)</p>
-  <p>Python básico</p>
-</div>
+  <footer class="text-center p-4 mt-5">
+    <p class="m-0">Desenvolvido por Guilherme Henrique Campos Ribeiro</p>
+  </footer>
 
-<!-- formacao -->
-<div id="formacao" class="secao">
-  <h2>Formação</h2>
-  <p>Ensino médio completo</p>
-  <p>Faculdade (1º semestre)</p>
-</div>
-
-<!-- contato -->
-<div id="contato" class="secao">
-  <h2>Contato</h2>
-  <p>Email: guilhermeribeiro.hcr@gmail.com</p>
-  <p>GitHub: github.com/guilherme16092007</p>
-</div>
-
-<!-- rodape -->
-<footer class="text-center p-3">
-  <p>Desenvolvido por Guilherme Henrique Campos Ribero</p>
-</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
